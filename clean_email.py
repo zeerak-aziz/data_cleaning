@@ -1,17 +1,10 @@
 import re
 
-def clean_email(text):
+def clean_email(text: str) -> str:
     """
-    takes a string and removes any email addresses, replaces with '****'.
-    :param text: The input text containing potential email addresses.
-    :return: The text with email addresses obscured.
+    takes a string and removes any email addresses, replaces with '****'
     """
-    # basic regex: Regex pattern that matches most email formats
     email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,})?' 
-
-    # Advanced regex: this should disallow leading and trailing dots in most places
-    # not working - return to basic
-    # email_pattern = r'[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}'
     
     cleaned_text = re.sub(email_pattern, '****', text)
     return cleaned_text
