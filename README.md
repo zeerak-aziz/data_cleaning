@@ -1,4 +1,4 @@
-# data_cleaning_utils
+# data_cleaning utils
 This repository contains a collection of reusable data cleaning functions designed to  preprocess data within data engineering pipelines. The primary goal is to enhance data quality, ensure data privacy, and handle common edge cases efficiently
 
 
